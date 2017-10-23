@@ -79,7 +79,7 @@ void List_add(T ls, void* elem) {
 void* List_remove(T ls) {
 	assert(ls && ls->size);
 
-	N node = ls->head.back;
+	N node = ls->head.front;
 	void* elem = node->elem;
 	Node_delete(node);
 	Node_destroy(&node);
